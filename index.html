@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>United Property Consultant & Builders | DHA · Gulberg · Bahria Town · Islamabad</title>
+<meta name="description" content="Pakistan's trusted real estate consultants. Buy, sell, invest & build in DHA, CDA, Gulberg Greens, Jinnah Garden & Ghouri Town. Serving global investors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g:#0B4D32;--g2:#0F5A3A;--g3:#1a7a50;--gd:#062318;
+  --gold:#C9A84C;--gold2:#E8C96A;--gold3:#F5DFA0;
+  --ch:#111111;--ch2:#1e1e1e;
+  --wh:#FFFFFF;--ow:#F7F4ED;--ow2:#EDE9DF;
+  --gray:#888;--gray2:#555;
+  --fs:clamp(14px,2.2vw,16px);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:var(--fs);}
+body{font-family:'DM Sans',sans-serif;background:#f0ece4;color:var(--ch);overflow-x:hidden;}
+/* ── GLOBAL BG TEXTURE ── */
+.site-bg-wrap{position:fixed;inset:0;z-index:-2;background:url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=1920&auto=format&fit=crop&q=40') center/cover no-repeat;filter:brightness(0.13) saturate(0.5);}
+
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+
+/* ── LOADER ── */
+#loader{position:fixed;inset:0;background:var(--gd);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .6s ease;}
+#loader.hide{opacity:0;pointer-events:none;}
+.loader-logo{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,6vw,52px);color:var(--gold);font-weight:700;letter-spacing:2px;animation:logoFade 1.2s ease forwards;}
+.loader-sub{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:4px;text-transform:uppercase;margin-top:8px;animation:logoFade 1.4s ease forwards;}
+.loader-bar{width:180px;height:2px;background:rgba(255,255,255,.1);border-radius:1px;margin-top:28px;overflow:hidden;}
+.loader-progress{height:100%;background:linear-gradient(to right,var(--gold),var(--gold2));width:0%;animation:loadBar 1.8s ease forwards;}
+@keyframes loadBar{to{width:100%;}}
+@keyframes logoFade{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:background .4s,box-shadow .4s,padding .3s;}
+nav.solid{background:rgba(6,35,24,.97);box-shadow:0 2px 30px rgba(0,0,0,.5);backdrop-filter:blur(12px);}
+.nav-wrap{max-width:1280px;margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-icon{width:38px;height:38px;background:var(--gold);border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:18px;color:var(--gd);flex-shrink:0;}
+.brand-text{line-height:1.1;}
+.brand-name{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:var(--gold);letter-spacing:.5px;}
+.brand-tagline{font-size:9px;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,.8);font-size:13px;font-weight:500;padding:7px 13px;border-radius:4px;transition:.2s;white-space:nowrap;}
+.nav-links a:hover{color:var(--gold2);}
+.nav-cta{background:var(--gold)!important;color:var(--gd)!important;font-weight:600!important;border-radius:4px;}
+.nav-cta:hover{background:var(--gold2)!important;}
+.hamburger{display:none;background:none;border:1px solid rgba(255,255,255,.25);color:#fff;padding:7px 12px;border-radius:4px;cursor:pointer;font-size:18px;line-height:1;}
+.mob-nav{display:none;flex-direction:column;background:rgba(6,35,24,.98);border-top:1px solid rgba(255,255,255,.07);}
+.mob-nav.open{display:flex;}
+.mob-nav a{padding:13px 28px;color:rgba(255,255,255,.8);font-size:15px;border-bottom:1px solid rgba(255,255,255,.06);}
+.mob-nav a:last-child{border:none;color:var(--gold);font-weight:600;}
+
+/* ── HERO ── */
+.hero{position:relative;height:100vh;min-height:580px;display:flex;align-items:center;overflow:hidden;}
+.hero-slides{position:absolute;inset:0;}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease;background-size:cover;background-position:center;}
+.slide.active{opacity:1;}
+.hero-dimmer{position:absolute;inset:0;background:linear-gradient(120deg,rgba(6,35,24,.88) 0%,rgba(6,35,24,.55) 55%,rgba(6,35,24,.3) 100%);z-index:1;}
+.hero-grain{position:absolute;inset:0;z-index:1;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-repeat:repeat;background-size:128px;}
+#particles{position:absolute;inset:0;z-index:2;pointer-events:none;}
+.hero-inner{position:relative;z-index:3;max-width:1280px;margin:0 auto;padding:0 28px;width:100%;}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,168,76,.4);background:rgba(201,168,76,.08);color:var(--gold2);padding:6px 16px;border-radius:100px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:500;margin-bottom:22px;}
+.hero-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:blink 2s ease-in-out infinite;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,7vw,84px);font-weight:700;color:#fff;line-height:1.05;margin-bottom:20px;max-width:760px;}
+.hero h1 span{color:var(--gold);font-style:italic;}
+.hero-sub{font-size:clamp(14px,2vw,17px);color:rgba(255,255,255,.7);line-height:1.75;max-width:500px;margin-bottom:36px;font-weight:300;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-g{background:var(--gold);color:var(--gd);padding:14px 32px;border-radius:4px;font-weight:600;font-size:14px;border:none;cursor:pointer;transition:.25s;letter-spacing:.3px;display:inline-block;}
+.btn-g:hover{background:var(--gold2);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:#fff;padding:14px 32px;border-radius:4px;font-weight:500;font-size:14px;border:1px solid rgba(255,255,255,.35);transition:.25s;display:inline-block;cursor:pointer;}
+.btn-ghost:hover{border-color:var(--gold2);color:var(--gold2);}
+.hero-stats-row{display:flex;gap:clamp(20px,4vw,52px);margin-top:58px;flex-wrap:wrap;}
+.hstat{display:flex;flex-direction:column;}
+.hstat-n{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,42px);font-weight:700;color:var(--gold);line-height:1;}
+.hstat-l{font-size:10px;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase;margin-top:4px;}
+.slide-dots{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:3;}
+.sdot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.3);border:none;cursor:pointer;transition:.3s;}
+.sdot.on{background:var(--gold);width:22px;border-radius:3px;}
+.scroll-hint{position:absolute;right:32px;bottom:32px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.35);font-size:10px;letter-spacing:2px;text-transform:uppercase;}
+.scroll-line{width:1px;height:44px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollDrop 2s ease-in-out infinite;}
+@keyframes scrollDrop{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}51%{transform:scaleY(1);transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+
+/* ── SEARCH ── */
+.search-wrap{background:var(--ow);padding:40px 24px;}
+.search-box{max-width:1100px;margin:0 auto;background:#fff;border-radius:6px;box-shadow:0 6px 40px rgba(0,0,0,.09);overflow:hidden;}
+.s-tabs{display:flex;border-bottom:1px solid #eae6db;}
+.s-tab{padding:14px 28px;font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;cursor:pointer;border:none;background:none;color:var(--gray);border-bottom:2px solid transparent;transition:.2s;}
+.s-tab.on{color:var(--g);border-bottom-color:var(--gold);}
+.s-fields{padding:24px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;align-items:end;}
+.sf label{display:block;font-size:10px;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+.sf select,.sf input{width:100%;border:1px solid #ddd;border-radius:4px;padding:10px 12px;font-size:13px;font-family:inherit;outline:none;transition:.2s;background:#fff;color:var(--ch);}
+.sf select:focus,.sf input:focus{border-color:var(--g);}
+.s-btn{background:var(--g);color:#fff;border:none;border-radius:4px;padding:11px 22px;font-size:13px;font-weight:600;cursor:pointer;height:40px;letter-spacing:.5px;transition:.2s;white-space:nowrap;}
+.s-btn:hover{background:var(--g3);}
+
+/* ── SECTION BASE ── */
+.sec{padding:clamp(60px,8vw,100px) 24px;}
+.sec-inner{max-width:1280px;margin:0 auto;}
+.eyebrow{font-size:10px;font-weight:600;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;}
+.sec-h{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4.5vw,48px);font-weight:700;color:var(--ch);line-height:1.15;margin-bottom:14px;}
+.sec-h em{color:var(--g);font-style:italic;}
+.gold-bar{width:48px;height:3px;background:linear-gradient(to right,var(--gold),var(--gold2));border-radius:2px;}
+.sec-p{color:var(--gray2);font-size:15px;line-height:1.75;max-width:520px;margin-top:14px;}
+.sec-head-row{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;gap:20px;flex-wrap:wrap;}
+.link-btn{font-size:13px;font-weight:600;color:var(--g);letter-spacing:.5px;border:1px solid var(--g);padding:10px 22px;border-radius:4px;transition:.2s;white-space:nowrap;}
+.link-btn:hover{background:var(--g);color:#fff;}
+
+/* ── PROPERTIES ── */
+.bg-ow{background:var(--ow);}
+.props-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;}
+.prop-card{background:#fff;border-radius:6px;overflow:hidden;transition:.3s ease;box-shadow:0 2px 14px rgba(0,0,0,.06);}
+.prop-card:hover{transform:translateY(-5px);box-shadow:0 14px 44px rgba(0,0,0,.11);}
+.prop-img-wrap{position:relative;height:210px;overflow:hidden;}
+.prop-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.prop-card:hover .prop-img-wrap img{transform:scale(1.05);}
+.prop-badge{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;}
+.badge-sale{background:var(--gold);color:var(--gd);}
+.badge-inv{background:var(--g);color:#fff;}
+.badge-hot{background:#c0392b;color:#fff;}
+.prop-wish{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.9);border:none;border-radius:50%;width:32px;height:32px;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;}
+.prop-wish:hover{background:#fff;transform:scale(1.1);}
+.prop-body{padding:18px;}
+.prop-price{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:var(--g);margin-bottom:4px;}
+.prop-price small{font-family:'DM Sans',sans-serif;font-size:12px;color:var(--gray);font-weight:400;}
+.prop-title{font-size:14px;font-weight:600;color:var(--ch);margin-bottom:5px;}
+.prop-loc{font-size:12px;color:var(--gray);margin-bottom:14px;display:flex;align-items:center;gap:4px;}
+.prop-feats{display:flex;gap:14px;border-top:1px solid var(--ow2);padding-top:12px;}
+.pf{font-size:12px;color:var(--gray);display:flex;align-items:center;gap:4px;}
+
+/* ── WHY ── */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px;}
+.why-card{padding:28px 22px;border-radius:6px;border:1px solid var(--ow2);background:#fff;transition:.3s;}
+.why-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 28px rgba(201,168,76,.1);}
+.why-ico{font-size:26px;margin-bottom:14px;display:block;}
+.why-t{font-size:15px;font-weight:600;color:var(--ch);margin-bottom:7px;}
+.why-d{font-size:13px;color:var(--gray2);line-height:1.65;}
+
+/* ── PROJECTS ── */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;}
+.proj-card{border-radius:6px;overflow:hidden;background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.07);transition:.3s;}
+.proj-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.1);}
+.proj-img{position:relative;height:240px;overflow:hidden;}
+.proj-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.proj-card:hover .proj-img img{transform:scale(1.06);}
+.proj-status{position:absolute;top:14px;left:14px;padding:5px 14px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+.ps-avail{background:#16a34a;color:#fff;}
+.ps-soon{background:var(--gold);color:var(--gd);}
+.ps-sold{background:#ef4444;color:#fff;}
+.proj-roi{position:absolute;bottom:14px;right:14px;background:rgba(6,35,24,.85);color:var(--gold2);font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;padding:6px 14px;border-radius:4px;backdrop-filter:blur(4px);}
+.proj-body{padding:20px;}
+.proj-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--ch);margin-bottom:4px;}
+.proj-loc{font-size:12px;color:var(--gray);margin-bottom:12px;display:flex;align-items:center;gap:4px;}
+.proj-details{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;}
+.pd{font-size:12px;}
+.pd-label{color:var(--gray);margin-bottom:2px;}
+.pd-val{font-weight:600;color:var(--ch);}
+.proj-tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+.ptag{font-size:10px;font-weight:600;padding:3px 10px;border-radius:100px;background:rgba(11,77,50,.08);color:var(--g);letter-spacing:.5px;text-transform:uppercase;}
+.proj-btn{display:block;text-align:center;background:var(--g);color:#fff;padding:11px;border-radius:4px;font-size:13px;font-weight:600;transition:.2s;}
+.proj-btn:hover{background:var(--g3);}
+
+/* ── INVEST STRIP ── */
+.invest-strip{background:linear-gradient(130deg,var(--gd) 0%,var(--g) 60%,#1a5a35 100%);position:relative;overflow:hidden;}
+.invest-strip::after{content:'';position:absolute;top:-60px;right:-60px;width:340px;height:340px;border-radius:50%;background:rgba(201,168,76,.07);pointer-events:none;}
+.inv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:18px;}
+.inv-card{border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:24px;background:rgba(255,255,255,.05);transition:.3s;backdrop-filter:blur(3px);}
+.inv-card:hover{background:rgba(255,255,255,.1);border-color:rgba(201,168,76,.4);}
+.inv-name{font-size:13px;font-weight:600;color:var(--gold2);letter-spacing:.8px;text-transform:uppercase;margin-bottom:3px;}
+.inv-loc{font-size:11px;color:rgba(255,255,255,.45);margin-bottom:14px;}
+.inv-roi{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:#fff;line-height:1;margin-bottom:3px;}
+.inv-lbl{font-size:10px;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;}
+
+/* ── COUNTERS ── */
+.counters{background:var(--g);padding:56px 24px;}
+.cnt-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:28px;text-align:center;}
+.cnt-n{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,52px);font-weight:700;color:var(--gold);}
+.cnt-l{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;}
+
+/* ── TEAM ── */
+.team-section-bg{position:relative;background:linear-gradient(rgba(6,35,24,0.78),rgba(6,35,24,0.68)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&auto=format&fit=crop&q=70') center/cover no-repeat;}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;width:100%;}
+.team-card{border-radius:0;overflow:hidden;border:none;border-right:1px solid rgba(255,255,255,0.15);background:transparent;transition:.3s;text-align:center;}
+.team-card:last-child{border-right:none;}
+.team-card:hover{background:rgba(255,255,255,0.08);transform:translateY(-4px);z-index:1;position:relative;}
+.team-body{padding:44px 32px 48px;}
+.team-name{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.8vw,34px);font-weight:700;color:#fff;margin-bottom:8px;line-height:1.1;}
+.team-role{font-size:12px;color:var(--gold2);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;}
+.team-divider{width:40px;height:2px;background:linear-gradient(to right,var(--gold),var(--gold2));margin:0 auto 22px;}
+.team-phones{display:flex;flex-direction:column;gap:8px;}
+.team-phones a{display:block;font-size:clamp(16px,2vw,22px);color:var(--gold2);font-weight:700;padding:6px 0;letter-spacing:.5px;border-bottom:1px solid rgba(255,255,255,0.12);}
+.team-phones a:last-child{border-bottom:none;}
+.team-phones a:hover{color:#fff;}
+@media(max-width:768px){.team-grid{grid-template-columns:1fr;}.team-card{border-right:none;border-bottom:1px solid rgba(255,255,255,0.12);}}
+
+
+/* ── TESTIMONIALS ── */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px;}
+.tc{background:#fff;border-radius:8px;padding:32px;border:1px solid var(--ow2);transition:.2s;}
+.tc:hover{box-shadow:0 6px 24px rgba(0,0,0,.07);}
+.tc-stars{color:var(--gold);font-size:20px;letter-spacing:3px;margin-bottom:14px;}
+.tc-text{font-size:clamp(14px,1.8vw,16px);color:var(--ch2);line-height:1.8;font-style:italic;margin-bottom:20px;}
+.tc-auth{display:flex;align-items:center;gap:14px;}
+.tc-av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--g),var(--g3));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;flex-shrink:0;}
+.tc-name{font-size:clamp(15px,2vw,18px);font-weight:700;color:var(--ch);font-family:'Cormorant Garamond',serif;}
+.tc-from{font-size:12px;color:var(--gray);margin-top:2px;}
+
+/* ── CONTACT ── */
+.contact-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:start;}
+.c-items{display:flex;flex-direction:column;gap:20px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:32px;backdrop-filter:blur(6px);}
+.ci{display:flex;gap:14px;align-items:flex-start;}
+.ci-icon{width:44px;height:44px;background:rgba(201,168,76,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.ci-l{font-size:10px;font-weight:600;color:var(--gold2);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;}
+.ci-v{font-size:14px;font-weight:500;color:rgba(255,255,255,0.9);line-height:1.5;}
+.ci-v a{color:var(--gold2);}
+.ci-v a:hover{color:#fff;}
+.c-form{display:flex;flex-direction:column;gap:13px;background:#fff;border-radius:8px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.2);}
+.c-row{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+.c-input{width:100%;border:1px solid #ddd;border-radius:4px;padding:12px 14px;font-size:14px;font-family:inherit;outline:none;transition:.2s;color:var(--ch);}
+.c-input:focus{border-color:var(--g);}
+textarea.c-input{resize:vertical;min-height:100px;}
+.intl-note{background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);border-radius:6px;padding:16px;margin-top:4px;}
+.intl-title{font-size:12px;font-weight:700;color:var(--gold2);margin-bottom:5px;}
+.intl-text{font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;}
+
+/* ── FOOTER ── */
+footer{background:var(--ch);color:#fff;padding:56px 24px 22px;}
+.footer-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px;}
+.f-brand-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--gold);}
+.f-brand-tag{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
+.f-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;margin:12px 0 18px;}
+.f-socials{display:flex;gap:9px;}
+.fs-btn{width:34px;height:34px;border-radius:4px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(255,255,255,.6);transition:.2s;}
+.fs-btn:hover{background:var(--gold);color:var(--gd);}
+.f-head{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;}
+.f-links{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.f-links a{font-size:13px;color:rgba(255,255,255,.45);transition:.2s;}
+.f-links a:hover{color:var(--gold);}
+.f-bottom{max-width:1280px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.f-copy{font-size:11px;color:rgba(255,255,255,.3);}
+.f-legal{display:flex;gap:16px;}
+.f-legal a{font-size:11px;color:rgba(255,255,255,.3);}
+
+/* ── FLOATING ── */
+.floats{position:fixed;bottom:22px;right:22px;display:flex;flex-direction:column;gap:10px;z-index:800;}
+.fl-btn{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:.2s;border:none;cursor:pointer;}
+.fl-btn:hover{transform:scale(1.08);}
+.fl-wa{background:#25D366;color:#fff;}
+.fl-call{background:var(--gold);color:var(--gd);}
+
+/* ── TOAST ── */
+#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--g);color:#fff;padding:12px 24px;border-radius:4px;font-size:13px;opacity:0;transition:.3s;z-index:1000;pointer-events:none;white-space:nowrap;}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ── ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* ── MOBILE ── */
+@media(max-width:900px){
+  .contact-layout{grid-template-columns:1fr;gap:36px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:block;}
+  .s-fields{grid-template-columns:1fr 1fr;}
+  .c-row{grid-template-columns:1fr;}
+  .scroll-hint{display:none;}
+}
+@media(max-width:520px){
+  .s-fields{grid-template-columns:1fr;}
+  .s-tabs{overflow-x:auto;}
+  .footer-grid{grid-template-columns:1fr;}
+  .hero-stats-row{gap:18px;}
+  .hstat-n{font-size:24px;}
+  .hero-btns{flex-direction:column;max-width:280px;}
+  .btn-g,.btn-ghost{text-align:center;padding:13px 24px;}
+  .proj-details{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="site-bg-wrap"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">United Property</div>
+  <div class="loader-sub">Consultant &amp; Builders</div>
+  <div class="loader-bar"><div class="loader-progress"></div></div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-wrap">
+    <div class="brand">
+      <div class="brand-icon">UP</div>
+      <div class="brand-text">
+        <div class="brand-name">United Property</div>
+        <div class="brand-tagline">Consultant &amp; Builders</div>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#invest">Invest</a></li>
+      <li><a href="#team">Our Team</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Talk to Expert</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Menu">☰</button>
+  </div>
+  <div class="mob-nav" id="mobNav">
+    <a href="#properties" onclick="toggleNav()">Properties</a>
+    <a href="#projects" onclick="toggleNav()">Investment Projects</a>
+    <a href="#invest" onclick="toggleNav()">Why Invest</a>
+    <a href="#team" onclick="toggleNav()">Our Team</a>
+    <a href="#testimonials" onclick="toggleNav()">Reviews</a>
+    <a href="#contact" onclick="toggleNav()">Talk to Expert →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-slides" id="slides">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&auto=format&fit=crop&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&auto=format&fit=crop&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&auto=format&fit=crop&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1600&auto=format&fit=crop&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&auto=format&fit=crop&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&auto=format&fit=crop&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&auto=format&fit=crop&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&auto=format&fit=crop&q=80');"></div>
+  </div>
+  <div class="hero-dimmer"></div>
+  <div class="hero-grain"></div>
+  <canvas id="particles"></canvas>
+
+  <div class="hero-inner">
+    <div class="hero-pill"><span class="hero-dot"></span>Islamabad · DHA · Gulberg · Ghouri Town</div>
+    <h1>Your Property.<br><span>Pakistan's Best</span><br>Investment.</h1>
+    <p class="hero-sub">Buy, sell, invest &amp; build with confidence. Trusted by overseas Pakistanis and international investors across UAE, UK, USA, Canada &amp; Europe.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-g">View Investment Projects</a>
+      <a href="#contact" class="btn-ghost">Talk to an Expert</a>
+    </div>
+    <div class="hero-stats-row">
+      <div class="hstat"><span class="hstat-n count" data-t="850">0</span><span class="hstat-l">Properties Sold</span></div>
+      <div class="hstat"><span class="hstat-n count" data-t="1200">0</span><span class="hstat-l">Happy Clients</span></div>
+      <div class="hstat"><span class="hstat-n count" data-t="15">0</span><span class="hstat-l">Years Experience</span></div>
+      <div class="hstat"><span class="hstat-n count" data-t="40">0</span><span class="hstat-l">Projects Done</span></div>
+    </div>
+  </div>
+
+  <div class="slide-dots" id="slideDots"></div>
+  <div class="scroll-hint"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <div class="search-box">
+    <div class="s-tabs">
+      <button class="s-tab on" onclick="stab(this)">Buy</button>
+      <button class="s-tab" onclick="stab(this)">Rent</button>
+      <button class="s-tab" onclick="stab(this)">Plot</button>
+      <button class="s-tab" onclick="stab(this)">Commercial</button>
+    </div>
+    <div class="s-fields">
+      <div class="sf"><label>City</label>
+        <select>
+          <option>Islamabad</option>
+          <option>Rawalpindi</option>
+          <option>Lahore</option>
+          <option>Overseas Investment</option>
+        </select>
+      </div>
+      <div class="sf"><label>Society / Area</label>
+        <select id="societySelect" onchange="toggleCustomArea(this)">
+          <option>Any Society</option>
+          <option>DHA</option>
+          <option>CDA Sectors</option>
+          <option>Gulberg Greens</option>
+          <option>Jinnah Garden</option>
+          <option>Ghouri Town</option>
+          <option>Bahria Town</option>
+          <option>PWD</option>
+          <option>Commercial Area</option>
+          <option>Residential Area</option>
+          <option value="custom">✏️ Enter Your Own Area</option>
+        </select>
+      </div>
+      <div class="sf" id="customAreaField" style="display:none;"><label>Enter Your Area</label>
+        <input type="text" placeholder="Type your area, street or block…">
+      </div>
+      <div class="sf"><label>Residential</label>
+        <select>
+          <option>Any</option>
+          <option>House</option>
+          <option>Apartment / Flat</option>
+          <option>Studio</option>
+          <option>Penthouse</option>
+          <option>Villa</option>
+          <option>Farm House</option>
+          <option>Portion / Floor</option>
+        </select>
+      </div>
+      <div class="sf"><label>Property Type</label>
+        <select>
+          <option>Any Type</option>
+          <option>Plot</option>
+          <option>Commercial Plot</option>
+          <option>Commercial Shop</option>
+          <option>Commercial Office</option>
+          <option>Commercial Plaza</option>
+        </select>
+      </div>
+      <div class="sf"><label>Budget (PKR)</label>
+        <select>
+          <option>Any Budget</option>
+          <option>Under 50 Lakh</option>
+          <option>50L – 1 Crore</option>
+          <option>1 – 3 Crore</option>
+          <option>3 – 5 Crore</option>
+          <option>5 Crore+</option>
+        </select>
+      </div>
+      <div class="sf"><label>Beds</label>
+        <select>
+          <option>Any</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5+</option>
+          <option>N/A (Commercial)</option>
+        </select>
+      </div>
+      <div class="sf" style="align-self:flex-end;">
+        <button class="s-btn" onclick="showToast('Searching listings — our agent will WhatsApp you shortly!')">🔍 Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED PROPERTIES -->
+<section class="sec" id="properties" style="position:relative;background:linear-gradient(rgba(6,35,24,0.82),rgba(6,35,24,0.72)),url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&auto=format&fit=crop&q=70') center/cover fixed;">
+  <div class="sec-inner">
+    <div class="sec-head-row reveal">
+      <div>
+        <div class="eyebrow" style="color:var(--gold2);">Premium Listings</div>
+        <h2 class="sec-h" style="color:#fff;">Featured <em>Properties</em></h2>
+        <div class="gold-bar"></div>
+        <p class="sec-p" style="color:rgba(255,255,255,0.7);">Verified properties across DHA, CDA, Gulberg Greens, Jinnah Garden &amp; Ghouri Town — all with clear titles and fast documentation.</p>
+      </div>
+      <a href="#contact" class="link-btn" style="border-color:var(--gold);color:var(--gold);">All Listings →</a>
+    </div>
+    <div class="props-grid">
+
+      <div class="prop-card reveal">
+        <div class="prop-img-wrap">
+          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&auto=format&fit=crop&q=75" alt="5 Marla House DHA Islamabad" loading="lazy">
+          <span class="prop-badge badge-sale">For Sale</span>
+          <button class="prop-wish" onclick="wishToggle(this)" aria-label="Save">♡</button>
+        </div>
+        <div class="prop-body">
+          <div class="prop-price">PKR 2.8 Crore <small>/ House</small></div>
+          <div class="prop-title">5 Marla Modern Villa — DHA Phase 2</div>
+          <div class="prop-loc">📍 DHA Islamabad</div>
+          <div class="prop-feats"><span class="pf">🛏 4 Beds</span><span class="pf">🚿 3 Baths</span><span class="pf">📐 5 Marla</span></div>
+        </div>
+      </div>
+
+      <div class="prop-card reveal">
+        <div class="prop-img-wrap">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&auto=format&fit=crop&q=75" alt="Luxury Apartment Gulberg Greens" loading="lazy">
+          <span class="prop-badge badge-inv">Investment</span>
+          <button class="prop-wish" onclick="wishToggle(this)" aria-label="Save">♡</button>
+        </div>
+        <div class="prop-body">
+          <div class="prop-price">PKR 1.5 Crore <small>/ Apartment</small></div>
+          <div class="prop-title">2-Bed Luxury Apartment — Gulberg Greens</div>
+          <div class="prop-loc">📍 Gulberg Greens, Islamabad</div>
+          <div class="prop-feats"><span class="pf">🛏 2 Beds</span><span class="pf">🚿 2 Baths</span><span class="pf">📐 1050 sqft</span></div>
+        </div>
+      </div>
+
+      <div class="prop-card reveal">
+        <div class="prop-img-wrap">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=75" alt="Residential Plot Jinnah Garden" loading="lazy">
+          <span class="prop-badge badge-hot">Hot Deal</span>
+          <button class="prop-wish" onclick="wishToggle(this)" aria-label="Save">♡</button>
+        </div>
+        <div class="prop-body">
+          <div class="prop-price">PKR 85 Lakh <small>/ Plot</small></div>
+          <div class="prop-title">10 Marla Corner Plot — Jinnah Garden</div>
+          <div class="prop-loc">📍 Jinnah Garden, Islamabad</div>
+          <div class="prop-feats"><span class="pf">🌐 Corner</span><span class="pf">🧭 West Open</span><span class="pf">📐 10 Marla</span></div>
+        </div>
+      </div>
+
+      <div class="prop-card reveal">
+        <div class="prop-img-wrap">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&auto=format&fit=crop&q=75" alt="Commercial Plaza Ghouri Town" loading="lazy">
+          <span class="prop-badge badge-inv">Commercial</span>
+          <button class="prop-wish" onclick="wishToggle(this)" aria-label="Save">♡</button>
+        </div>
+        <div class="prop-body">
+          <div class="prop-price">PKR 3.2 Crore <small>/ Shop Plaza</small></div>
+          <div class="prop-title">Ground Floor Commercial Unit — Ghouri Town</div>
+          <div class="prop-loc">📍 Ghouri Town Phase 5, Islamabad</div>
+          <div class="prop-feats"><span class="pf">🏢 Ground Floor</span><span class="pf">🚗 Parking</span><span class="pf">📐 350 sqft</span></div>
+        </div>
+      </div>
+
+      <div class="prop-card reveal">
+        <div class="prop-img-wrap">
+          <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=600&auto=format&fit=crop&q=75" alt="10 Marla House Bahria Town" loading="lazy">
+          <span class="prop-badge badge-sale">For Sale</span>
+          <button class="prop-wish" onclick="wishToggle(this)" aria-label="Save">♡</button>
+        </div>
+        <div class="prop-body">
+          <div class="prop-price">PKR 4.5 Crore <small>/ House</small></div>
+          <div class="prop-title">10 Marla Fully Furnished — Bahria Town</div>
+          <div class="prop-loc">📍 Bahria Town Phase 8, Rawalpindi</div>
+          <div class="prop-feats"><span class="pf">🛏 5 Beds</span><span class="pf">🚿 4 Baths</span><span class="pf">📐 10 Marla</span></div>
+        </div>
+      </div>
+
+      <div class="prop-card reveal">
+        <div class="prop-img-wrap">
+          <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&auto=format&fit=crop&q=75" alt="1 Kanal Plot CDA Islamabad" loading="lazy">
+          <span class="prop-badge badge-inv">Investment</span>
+          <button class="prop-wish" onclick="wishToggle(this)" aria-label="Save">♡</button>
+        </div>
+        <div class="prop-body">
+          <div class="prop-price">PKR 7.8 Crore <small>/ Plot</small></div>
+          <div class="prop-title">1 Kanal Plot — CDA Sector G-13</div>
+          <div class="prop-loc">📍 G-13, Islamabad</div>
+          <div class="prop-feats"><span class="pf">📐 1 Kanal</span><span class="pf">🔖 CDA Approved</span><span class="pf">✅ Clear Title</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT PROJECTS -->
+<section class="sec bg-ow" id="projects">
+  <div class="sec-inner">
+    <div class="sec-head-row reveal">
+      <div>
+        <div class="eyebrow">Open For Investment</div>
+        <h2 class="sec-h">Recent <em>Projects</em></h2>
+        <div class="gold-bar"></div>
+        <p class="sec-p">High-yield opportunities across Islamabad's fastest-growing societies — secure your stake today.</p>
+      </div>
+      <a href="#contact" class="link-btn">Enquire Now →</a>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj-card reveal">
+        <div class="proj-img">
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&auto=format&fit=crop&q=80" alt="Gulberg Heights Apartment Project" loading="lazy">
+          <span class="proj-status ps-avail">Available Now</span>
+          <span class="proj-roi">22% ROI/yr</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Gulberg Heights — Apartments</div>
+          <div class="proj-loc">📍 Gulberg Greens, Islamabad</div>
+          <div class="proj-tag-row">
+            <span class="ptag">Residential</span><span class="ptag">Ready to Move</span><span class="ptag">Low Floor Available</span>
+          </div>
+          <div class="proj-details">
+            <div class="pd"><div class="pd-label">Starting Price</div><div class="pd-val">PKR 1.2 Crore</div></div>
+            <div class="pd"><div class="pd-label">Unit Size</div><div class="pd-val">850 – 1400 sqft</div></div>
+            <div class="pd"><div class="pd-label">Completion</div><div class="pd-val">Ready</div></div>
+            <div class="pd"><div class="pd-label">Payment Plan</div><div class="pd-val">3 Years Easy</div></div>
+          </div>
+          <a href="#contact" class="proj-btn">Request Details</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img">
+          <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=700&auto=format&fit=crop&q=80" alt="DHA Villas Project Islamabad" loading="lazy">
+          <span class="proj-status ps-avail">Available Now</span>
+          <span class="proj-roi">20% ROI/yr</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">DHA Phase 5 — Residential Villas</div>
+          <div class="proj-loc">📍 DHA, Islamabad</div>
+          <div class="proj-tag-row">
+            <span class="ptag">5 Marla</span><span class="ptag">10 Marla</span><span class="ptag">Gated Society</span>
+          </div>
+          <div class="proj-details">
+            <div class="pd"><div class="pd-label">Starting Price</div><div class="pd-val">PKR 2.5 Crore</div></div>
+            <div class="pd"><div class="pd-label">Unit Size</div><div class="pd-val">5 – 1 Kanal</div></div>
+            <div class="pd"><div class="pd-label">Completion</div><div class="pd-val">Q4 2025</div></div>
+            <div class="pd"><div class="pd-label">Payment Plan</div><div class="pd-val">5 Years Easy</div></div>
+          </div>
+          <a href="#contact" class="proj-btn">Request Details</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img">
+          <img src="https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?w=700&auto=format&fit=crop&q=80" alt="Jinnah Garden Commercial Plaza" loading="lazy">
+          <span class="proj-status ps-avail">Available Now</span>
+          <span class="proj-roi">18% ROI/yr</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Jinnah Garden — Commercial Plaza</div>
+          <div class="proj-loc">📍 Jinnah Garden, Islamabad</div>
+          <div class="proj-tag-row">
+            <span class="ptag">Shops</span><span class="ptag">Offices</span><span class="ptag">Ground + 4</span>
+          </div>
+          <div class="proj-details">
+            <div class="pd"><div class="pd-label">Starting Price</div><div class="pd-val">PKR 80 Lakh</div></div>
+            <div class="pd"><div class="pd-label">Unit Size</div><div class="pd-val">200 – 600 sqft</div></div>
+            <div class="pd"><div class="pd-label">Completion</div><div class="pd-val">Mid 2026</div></div>
+            <div class="pd"><div class="pd-label">Payment Plan</div><div class="pd-val">4 Years Easy</div></div>
+          </div>
+          <a href="#contact" class="proj-btn">Request Details</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img">
+          <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&auto=format&fit=crop&q=80" alt="Ghouri Town Houses Construction" loading="lazy">
+          <span class="proj-status ps-soon">Launching Soon</span>
+          <span class="proj-roi">15% ROI/yr</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Ghouri Town Phase 7 — Plots</div>
+          <div class="proj-loc">📍 Ghouri Town, Islamabad</div>
+          <div class="proj-tag-row">
+            <span class="ptag">3 Marla</span><span class="ptag">5 Marla</span><span class="ptag">Pre-Launch Price</span>
+          </div>
+          <div class="proj-details">
+            <div class="pd"><div class="pd-label">Starting Price</div><div class="pd-val">PKR 35 Lakh</div></div>
+            <div class="pd"><div class="pd-label">Plot Size</div><div class="pd-val">3 – 10 Marla</div></div>
+            <div class="pd"><div class="pd-label">Handover</div><div class="pd-val">2026</div></div>
+            <div class="pd"><div class="pd-label">Payment Plan</div><div class="pd-val">2 Years Easy</div></div>
+          </div>
+          <a href="#contact" class="proj-btn">Pre-Register Interest</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=700&auto=format&fit=crop&q=80" alt="Turnkey Construction United Builders" loading="lazy">
+          <span class="proj-status ps-avail">Build Now</span>
+          <span class="proj-roi">Custom ROI</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Turnkey Construction — Your Plot</div>
+          <div class="proj-loc">📍 DHA · Bahria · Gulberg · Ghouri Town</div>
+          <div class="proj-tag-row">
+            <span class="ptag">Grey Structure</span><span class="ptag">Finishing</span><span class="ptag">Interior Design</span>
+          </div>
+          <div class="proj-details">
+            <div class="pd"><div class="pd-label">Per Sqft Rate</div><div class="pd-val">PKR 3,200+</div></div>
+            <div class="pd"><div class="pd-label">Timeline</div><div class="pd-val">8 – 18 Months</div></div>
+            <div class="pd"><div class="pd-label">Supervision</div><div class="pd-val">Full On-Site</div></div>
+            <div class="pd"><div class="pd-label">Updates</div><div class="pd-val">Weekly Video</div></div>
+          </div>
+          <a href="#contact" class="proj-btn">Get Free Quote</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-img">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&auto=format&fit=crop&q=80" alt="Overseas Investment Package Pakistan" loading="lazy">
+          <span class="proj-status ps-avail">Overseas Package</span>
+          <span class="proj-roi">20%+ ROI/yr</span>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Overseas Investor Package</div>
+          <div class="proj-loc">📍 Multiple Societies, Islamabad</div>
+          <div class="proj-tag-row">
+            <span class="ptag">POA Available</span><span class="ptag">Remote Buying</span><span class="ptag">Legal Support</span>
+          </div>
+          <div class="proj-details">
+            <div class="pd"><div class="pd-label">Min. Investment</div><div class="pd-val">PKR 50 Lakh</div></div>
+            <div class="pd"><div class="pd-label">Repatriation</div><div class="pd-val">Fully Legal</div></div>
+            <div class="pd"><div class="pd-label">Title Transfer</div><div class="pd-val">Handled by Us</div></div>
+            <div class="pd"><div class="pd-label">Support</div><div class="pd-val">24/7 Dedicated</div></div>
+          </div>
+          <a href="#contact" class="proj-btn">Book Free Consultation</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="sec" id="invest">
+  <div class="sec-inner">
+    <div class="sec-head-row reveal">
+      <div>
+        <div class="eyebrow">Why United Property</div>
+        <h2 class="sec-h">Your Global <em>Partner</em><br>In Pakistan Real Estate</h2>
+        <div class="gold-bar"></div>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><span class="why-ico">✅</span><div class="why-t">Verified Properties</div><div class="why-d">Every listing is title-verified and legally cleared before being presented to any buyer.</div></div>
+      <div class="why-card reveal"><span class="why-ico">🌍</span><div class="why-t">Global Reach</div><div class="why-d">Serving UAE, UK, USA, Canada, Australia &amp; Europe. We bridge overseas Pakistanis with the best local opportunities.</div></div>
+      <div class="why-card reveal"><span class="why-ico">📋</span><div class="why-t">Fast Documentation</div><div class="why-d">Title transfer, CDA/DHA approvals, and legal paperwork handled swiftly — you just sign.</div></div>
+      <div class="why-card reveal"><span class="why-ico">🏗️</span><div class="why-t">Construction Services</div><div class="why-d">Plazas, homes, grey structure to turnkey — we build to your vision with weekly video updates.</div></div>
+      <div class="why-card reveal"><span class="why-ico">📈</span><div class="why-t">Investment Advisory</div><div class="why-d">Data-driven ROI analysis on DHA, CDA, Gulberg, Jinnah Garden and Ghouri Town sectors.</div></div>
+      <div class="why-card reveal"><span class="why-ico">🕐</span><div class="why-t">24/7 Expert Support</div><div class="why-d">Dedicated WhatsApp line for overseas clients. We're available across time zones — always.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT ROI STRIP -->
+<section class="sec invest-strip" id="roi">
+  <div class="sec-inner">
+    <div class="sec-head-row reveal" style="margin-bottom:36px;">
+      <div>
+        <div class="eyebrow" style="color:var(--gold2);">High-Yield Zones</div>
+        <h2 class="sec-h" style="color:#fff;">Prime Investment <em style="color:var(--gold);">Societies</em></h2>
+        <div class="gold-bar"></div>
+      </div>
+      <a href="#contact" class="btn-g" style="flex-shrink:0;">Get ROI Report</a>
+    </div>
+    <div class="inv-grid">
+      <div class="inv-card reveal"><div class="inv-name">DHA Islamabad</div><div class="inv-loc">All Phases</div><div class="inv-roi">18–24%</div><div class="inv-lbl">Avg. Annual ROI</div></div>
+      <div class="inv-card reveal"><div class="inv-name">Gulberg Greens</div><div class="inv-loc">Islamabad</div><div class="inv-roi">20–28%</div><div class="inv-lbl">Avg. Annual ROI</div></div>
+      <div class="inv-card reveal"><div class="inv-name">Jinnah Garden</div><div class="inv-loc">Islamabad</div><div class="inv-roi">15–20%</div><div class="inv-lbl">Avg. Annual ROI</div></div>
+      <div class="inv-card reveal"><div class="inv-name">Bahria Town</div><div class="inv-loc">Rawalpindi</div><div class="inv-roi">12–18%</div><div class="inv-lbl">Avg. Annual ROI</div></div>
+      <div class="inv-card reveal"><div class="inv-name">Ghouri Town</div><div class="inv-loc">Islamabad</div><div class="inv-roi">10–15%</div><div class="inv-lbl">Avg. Annual ROI</div></div>
+      <div class="inv-card reveal"><div class="inv-name">CDA Sectors</div><div class="inv-loc">Islamabad</div><div class="inv-roi">14–22%</div><div class="inv-lbl">Avg. Annual ROI</div></div>
+    </div>
+    <p style="color:rgba(255,255,255,.3);font-size:11px;margin-top:22px;">* ROI estimates are indicative and based on historical market data. Consult our advisors for personalised projections.</p>
+  </div>
+</section>
+
+<!-- COUNTERS -->
+<div class="counters">
+  <div class="cnt-inner">
+    <div class="cnt-item reveal"><div class="cnt-n cnt" data-t="850">850+</div><div class="cnt-l">Properties Sold</div></div>
+    <div class="cnt-item reveal"><div class="cnt-n cnt" data-t="1200">1200+</div><div class="cnt-l">Happy Clients</div></div>
+    <div class="cnt-item reveal"><div class="cnt-n cnt" data-t="40">40+</div><div class="cnt-l">Projects Completed</div></div>
+    <div class="cnt-item reveal"><div class="cnt-n cnt" data-t="15">15+</div><div class="cnt-l">Years Experience</div></div>
+  </div>
+</div>
+
+<!-- TEAM -->
+<section class="sec team-section-bg" id="team" style="padding-bottom:0;">
+  <div class="sec-inner">
+    <div class="sec-head-row reveal">
+      <div>
+        <div class="eyebrow" style="color:var(--gold2);">The Experts</div>
+        <h2 class="sec-h" style="color:#fff;">Meet Our <em style="color:var(--gold);">Team</em></h2>
+        <div class="gold-bar"></div>
+        <p class="sec-p" style="color:rgba(255,255,255,0.65);">Combined 40+ years of real estate experience in DHA, CDA, Gulberg, Jinnah Garden and Ghouri Town.</p>
+      </div>
+    </div>
+    <div class="team-grid" style="margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);width:100vw;border-top:1px solid rgba(255,255,255,0.12);">
+      <div class="team-card reveal">
+        <div class="team-body">
+          <div class="team-name">Masood Ahmed Abbasi</div>
+          <div class="team-role">Senior Property Consultant</div>
+          <div class="team-divider"></div>
+          <div class="team-phones">
+            <a href="tel:+923008527732">📞 0300-8527732</a>
+            <a href="tel:+923138527732">📞 0313-8527732</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-body">
+          <div class="team-name">Sardar Abdul Shakoor</div>
+          <div class="team-role">Property &amp; Construction Advisor</div>
+          <div class="team-divider"></div>
+          <div class="team-phones">
+            <a href="tel:+923135591701">📞 0313-5591701</a>
+            <a href="tel:+923015355313">📞 0301-5355313</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-body">
+          <div class="team-name">Sardar Maroof Soduzai</div>
+          <div class="team-role">Investment &amp; Sales Consultant</div>
+          <div class="team-divider"></div>
+          <div class="team-phones">
+            <a href="tel:+923455959474">📞 0345-5959474</a>
+            <a href="tel:+923174698361">📞 0317-4698361</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec bg-ow" id="testimonials">
+  <div class="sec-inner">
+    <div class="sec-head-row reveal">
+      <div>
+        <div class="eyebrow">Client Stories</div>
+        <h2 class="sec-h">Trusted by Investors <em>Worldwide</em></h2>
+        <div class="gold-bar"></div>
+      </div>
+    </div>
+    <div class="testi-grid">
+      <div class="tc reveal">
+        <div class="tc-stars">★★★★★</div>
+        <div class="tc-text">"Bought a 10-marla plot in DHA from London without visiting Pakistan. Masood Sahab handled everything — title transfer, possession, the lot. Absolute professionals I can trust with my eyes closed."</div>
+        <div class="tc-auth"><div class="tc-av">AK</div><div><div class="tc-name">Ahmed Khan</div><div class="tc-from">Overseas Client — London, UK</div></div></div>
+      </div>
+      <div class="tc reveal">
+        <div class="tc-stars">★★★★★</div>
+        <div class="tc-text">"They built my house in Ghouri Town exactly as designed — on budget and six weeks early. Weekly videos kept me updated from Dubai throughout. I cannot recommend them enough."</div>
+        <div class="tc-auth"><div class="tc-av">FA</div><div><div class="tc-name">Fahad Al-Rashid</div><div class="tc-from">Construction Client — Dubai, UAE</div></div></div>
+      </div>
+      <div class="tc reveal">
+        <div class="tc-stars">★★★★★</div>
+        <div class="tc-text">"As a first-time investor from Toronto, I was nervous. Sardar Abdul Shakoor guided me on a Gulberg Greens apartment — the ROI in year one exceeded expectations. Very thankful."</div>
+        <div class="tc-auth"><div class="tc-av">SR</div><div><div class="tc-name">Sara Riaz</div><div class="tc-from">Investor — Toronto, Canada</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact" style="background:linear-gradient(rgba(6,35,24,0.85),rgba(6,35,24,0.80)),url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=1600&auto=format&fit=crop&q=70') center/cover no-repeat;">
+  <div class="sec-inner">
+    <div class="sec-head-row reveal" style="margin-bottom:40px;">
+      <div>
+        <div class="eyebrow" style="color:var(--gold2);">Get In Touch</div>
+        <h2 class="sec-h" style="color:#fff;">Talk to an <em style="color:var(--gold);">Expert</em> Today</h2>
+        <div class="gold-bar"></div>
+        <p class="sec-p" style="color:rgba(255,255,255,0.65);">Free consultation. No obligation. Our advisors are available across time zones for international clients.</p>
+      </div>
+    </div>
+    <div class="contact-layout reveal">
+      <div class="c-items">
+        <div class="ci"><div class="ci-icon">📍</div><div><div class="ci-l">Office Address</div><div class="ci-v">Ghouri Town Phase 5, Islamabad, Pakistan</div></div></div>
+        <div class="ci"><div class="ci-icon">📞</div><div>
+          <div class="ci-l">Masood Ahmed Abbasi</div>
+          <div class="ci-v"><a href="tel:+923008527732">0300-8527732</a> &nbsp;|&nbsp; <a href="tel:+923138527732">0313-8527732</a></div>
+        </div></div>
+        <div class="ci"><div class="ci-icon">📞</div><div>
+          <div class="ci-l">Sardar Abdul Shakoor</div>
+          <div class="ci-v"><a href="tel:+923135591701">0313-5591701</a> &nbsp;|&nbsp; <a href="tel:+923015355313">0301-5355313</a></div>
+        </div></div>
+        <div class="ci"><div class="ci-icon">📞</div><div>
+          <div class="ci-l">Sardar Maroof Soduzai</div>
+          <div class="ci-v"><a href="tel:+923455959474">0345-5959474</a> &nbsp;|&nbsp; <a href="tel:+923174698361">0317-4698361</a></div>
+        </div></div>
+        <div class="ci"><div class="ci-icon">🕐</div><div><div class="ci-l">Office Hours</div><div class="ci-v">Mon–Sat 9am–8pm &nbsp;|&nbsp; Sun 11am–4pm<br>WhatsApp available 24/7</div></div></div>
+        <div class="intl-note">
+          <div class="intl-title">🌍 International Investors</div>
+          <div class="intl-text">We assist overseas Pakistanis &amp; global investors with secure remote buying, legal verification, Power of Attorney arrangements, and rental management. You invest — we handle everything.</div>
+        </div>
+      </div>
+      <div class="c-form">
+        <div class="c-row">
+          <input class="c-input" type="text" placeholder="Your Full Name" required>
+          <input class="c-input" type="tel" placeholder="WhatsApp / Phone">
+        </div>
+        <input class="c-input" type="email" placeholder="Email Address">
+        <div class="c-row">
+          <select class="c-input">
+            <option value="">I want to...</option>
+            <option>Buy Property</option>
+            <option>Sell Property</option>
+            <option>Invest (Plot/Flat)</option>
+            <option>Commercial Investment</option>
+            <option>Build a House</option>
+            <option>General Enquiry</option>
+          </select>
+        <select class="c-input">
+            <option value="">Preferred Society / Area</option>
+            <option>DHA Islamabad</option>
+            <option>CDA Sectors</option>
+            <option>Gulberg Greens</option>
+            <option>Jinnah Garden</option>
+            <option>Ghouri Town</option>
+            <option>Bahria Town</option>
+            <option>Commercial Area</option>
+            <option value="custom-area">🔍 My Own Area (mention in message)</option>
+          </select>
+        </div>
+        <select class="c-input">
+          <option value="">How are you contacting us from?</option>
+          <option>Pakistan</option>
+          <option>UAE / Middle East</option>
+          <option>UK / Europe</option>
+          <option>USA / Canada</option>
+          <option>Australia / NZ</option>
+          <option>Other</option>
+        </select>
+        <textarea class="c-input" placeholder="Tell us your requirements — budget, location preference, timeline..."></textarea>
+        <button class="btn-g" style="width:100%;padding:15px;font-size:15px;" onclick="formSubmit()">Send Message — We'll Reply Within 2 Hours ✓</button>
+        <p style="font-size:11px;color:var(--gray);text-align:center;margin-top:4px;">Or WhatsApp directly: <a href="https://wa.me/923008527732" style="color:var(--g);font-weight:600;" target="_blank">+92 300-8527732</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="f-brand-name">United Property</div>
+      <div class="f-brand-tag">Consultant &amp; Builders — Est. 2009</div>
+      <p class="f-desc">Pakistan's trusted real estate partner serving local and international clients. All kind of property &amp; construction in DHA, CDA, Gulberg, Jinnah Garden &amp; Ghouri Town.</p>
+      <div class="f-socials">
+        <a class="fs-btn" href="#" title="Facebook">f</a>
+        <a class="fs-btn" href="#" title="Instagram">ig</a>
+        <a class="fs-btn" href="#" title="YouTube">▶</a>
+        <a class="fs-btn" href="https://wa.me/923008527732" title="WhatsApp" target="_blank">WA</a>
+      </div>
+    </div>
+    <div>
+      <div class="f-head">Properties</div>
+      <ul class="f-links">
+        <li><a href="#properties">Buy Property</a></li>
+        <li><a href="#properties">Residential Plots</a></li>
+        <li><a href="#properties">Commercial Units</a></li>
+        <li><a href="#projects">Investment Projects</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-head">Services</div>
+      <ul class="f-links">
+        <li><a href="#projects">Construction</a></li>
+        <li><a href="#invest">Property Management</a></li>
+        <li><a href="#invest">Legal Documentation</a></li>
+        <li><a href="#contact">Overseas Investors</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-head">Societies</div>
+      <ul class="f-links">
+        <li><a href="#roi">DHA Islamabad</a></li>
+        <li><a href="#roi">CDA Sectors</a></li>
+        <li><a href="#roi">Gulberg Greens</a></li>
+        <li><a href="#roi">Jinnah Garden</a></li>
+        <li><a href="#roi">Ghouri Town</a></li>
+        <li><a href="#roi">Bahria Town</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <div class="f-copy">© 2025 United Property Consultant &amp; Builders. All rights reserved. | Ghouri Town, Islamabad, Pakistan</div>
+    <div class="f-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="floats">
+  <a href="tel:+923008527732" class="fl-btn fl-call" title="Call Now" aria-label="Call">📞</a>
+  <a href="https://wa.me/923008527732?text=Hello%20United%20Property%2C%20I%20am%20interested%20in%20a%20property%20enquiry." class="fl-btn fl-wa" title="WhatsApp" target="_blank" aria-label="WhatsApp">💬</a>
+</div>
+
+<script>
+/* LOADER */
+window.addEventListener('load',()=>{
+  setTimeout(()=>document.getElementById('loader').classList.add('hide'),1800);
+});
+
+/* NAV scroll */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('solid',window.scrollY>50);
+});
+nav.classList.add('solid');
+
+/* Mobile nav */
+function toggleNav(){
+  document.getElementById('mobNav').classList.toggle('open');
+}
+
+/* Search tabs */
+function stab(el){
+  document.querySelectorAll('.s-tab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+}
+
+/* Toggle custom area field */
+function toggleCustomArea(sel){
+  const f=document.getElementById('customAreaField');
+  if(sel.value==='custom'){f.style.display='block';}
+  else{f.style.display='none';}
+}
+
+/* HERO SLIDES */
+(function(){
+  const slides=document.querySelectorAll('.slide');
+  const dotsWrap=document.getElementById('slideDots');
+  let cur=0,timer;
+  slides.forEach((_,i)=>{
+    const d=document.createElement('button');
+    d.className='sdot'+(i===0?' on':'');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    d.onclick=()=>go(i);
+    dotsWrap.appendChild(d);
+  });
+  function go(n){
+    slides[cur].classList.remove('active');
+    dotsWrap.children[cur].classList.remove('on');
+    cur=n;
+    slides[cur].classList.add('active');
+    dotsWrap.children[cur].classList.add('on');
+  }
+  function next(){go((cur+1)%slides.length);}
+  timer=setInterval(next,5000);
+  document.querySelector('.hero').addEventListener('mouseenter',()=>clearInterval(timer));
+  document.querySelector('.hero').addEventListener('mouseleave',()=>{timer=setInterval(next,5000);});
+})();
+
+/* PARTICLES */
+(function(){
+  const c=document.getElementById('particles');
+  const ctx=c.getContext('2d');
+  function resize(){c.width=window.innerWidth;c.height=window.innerHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+  const N=Math.min(70,Math.floor(window.innerWidth/14));
+  const pts=Array.from({length:N},()=>({
+    x:Math.random()*c.width,y:Math.random()*c.height,
+    r:Math.random()*1.8+.4,
+    vx:(Math.random()-.5)*.25,vy:-Math.random()*.4-.1,
+    a:Math.random()*.5+.15
+  }));
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    pts.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.y<-4){p.y=c.height+4;p.x=Math.random()*c.width;}
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(201,168,76,${p.a})`;ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* REVEAL on scroll */
+const ro=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting)e.target.classList.add('in');
+}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+/* COUNTERS */
+function animCount(el){
+  const t=parseInt(el.dataset.t);
+  let c=0,step=Math.max(1,Math.ceil(t/55));
+  const id=setInterval(()=>{c=Math.min(c+step,t);el.textContent=c.toLocaleString()+'+';if(c>=t)clearInterval(id);},28);
+}
+const co=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.querySelectorAll('.count,.cnt').forEach(animCount);
+    co.unobserve(e.target);
+  }
+}),{threshold:.4});
+document.querySelector('.hero-stats-row')&&co.observe(document.querySelector('.hero-stats-row'));
+document.querySelector('.cnt-inner')&&co.observe(document.querySelector('.cnt-inner'));
+
+/* WISHLIST */
+function wishToggle(btn){
+  const on=btn.textContent==='♥';
+  btn.textContent=on?'♡':'♥';
+  btn.style.color=on?'':'#e74c3c';
+  showToast(on?'Removed from saved':'Saved to your list ♥');
+}
+
+/* TOAST */
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3200);
+}
+
+/* FORM */
+function formSubmit(){
+  const inputs=document.querySelectorAll('.c-input');
+  let ok=true;
+  inputs.forEach(i=>{if(i.hasAttribute('required')&&!i.value.trim())ok=false;});
+  if(!ok){showToast('Please fill in your name to proceed.');return;}
+  showToast('✓ Message sent! We will reply within 2 hours.');
+}
+</script>
+</body>
+</html>
